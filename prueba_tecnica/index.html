@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de consulta de cotizaciones médicas - Versión Simple">
+    <title>Consulta de Cotizaciones - Prueba Tecnica</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Encabezado -->
+            <div class="card-header">
+                <h1>Consulta de Cotizaciones</h1>
+                <p>Sistema de Información Médica -Prueba Tecnica</p>
+            </div>
+            
+            <!-- Cuerpo -->
+            <div class="card-body">
+                <!-- Sección de búsqueda -->
+                <div class="search-section">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="quotationId">
+                                ID de Cotización
+                            </label>
+                            <input 
+                                type="text" 
+                                id="quotationId" 
+                                name="quotation_id" 
+                                class="form-control" 
+                                placeholder="Ej: 1, 2, 3..."
+                                autocomplete="off"
+                                required>
+                        </div>
+                        
+                        <button type="submit" id="btnSearch" class="btn btn-primary">
+                            <span id="btnText">Buscar Cotización</span>
+                            <div id="spinner" class="spinner"></div>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Alertas -->
+                <div id="alertBox" class="alert"></div>
+                
+                <!-- Sección de resultados -->
+                <div id="resultSection" class="result-section">
+                    <h2 style="color: #0077B6; margin-bottom: 25px; font-size: 1.5rem;">
+                        Información de la Cotización
+                    </h2>
+                    
+                    <!-- Grid de información -->
+                    <div class="info-grid">
+                        <!-- Paciente -->
+                        <div class="info-card">
+                            <h3>👤 Paciente</h3>
+                            <p id="pacienteNombre">-</p>
+                            <strong>Teléfono:</strong>
+                            <p id="pacienteTelefono">-</p>
+                            <strong>Dirección:</strong>
+                            <p id="pacienteDireccion">-</p>
+                        </div>
+                        
+                        <!-- Profesional -->
+                        <div class="info-card">
+                            <h3>👨‍⚕️ Profesional</h3>
+                            <p id="profesionalNombre">-</p>
+                        </div>
+                        
+                        <!-- Cita -->
+                        <div class="info-card">
+                            <h3>📅 Cita Médica</h3>
+                            <strong>Fecha:</strong>
+                            <p id="citaFecha">-</p>
+                            <strong>Horario:</strong>
+                            <p id="citaHora">-</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Medicamento -->
+                    <div class="medication-section">
+                        <h3>💊 Medicamento Prescrito</h3>
+                        <div class="medication-item">
+                            <p id="medicamento">-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Sistema de Consulta de Cotizaciones - Versión Simple</p>
+            <p>© 2025 - Prueba Tecnica Medical System</p>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
